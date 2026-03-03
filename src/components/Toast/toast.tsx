@@ -24,8 +24,6 @@ export default function showToast(message: string) {
     draggable: true,
     className: "success-toast",
     progress: undefined,
-    icon() {
-      return <img src="/assets/images/icon-success-check.svg" alt="Success" />;
-    },
+    icon: () => <img src="/assets/images/icon-success-check.svg" alt="Success" />,
   });
 }
