@@ -26,3 +26,13 @@
   font-size: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 640px) {
+  .Toastify__toast-container {
+    width: calc(100% - 2rem);
+    left: 1rem;
+    right: 1rem;
+    top: 1rem;
+    padding: 0;
+  }
+}
