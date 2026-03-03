@@ -1,7 +1,7 @@
-import {  FieldErrors, useForm } from "react-hook-form";
+import { FieldErrors, useForm } from "react-hook-form";
 
-import {  ToastContainer } from "react-toastify";
-import { showToast } from "./components/Toast/toast";
+import { ToastContainer } from "react-toastify";
+import showToast from "./components/Toast/toast";
 
 type QueryType = "general" | "support";
 
@@ -35,11 +35,12 @@ export default function App() {
 
   const onValid = (data: FormData) => {
     console.log("Dados válidos:", data);
-    showToast("Mensagem enviada com sucesso!", "success");
+    showToast( "Obrigado por entrar em contato conosco!");
     reset();
   };
 
   const onInvalid = (errors: FieldErrors<FormData>) => {
+    showToast("Por favor, corrija os erros no formulário.");
     console.log("Dados inválidos:", errors);
   };
 
